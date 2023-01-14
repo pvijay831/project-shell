@@ -1,0 +1,9 @@
+- name: declare a variable from play
+  hosts: all
+  connection: local
+  vars:
+    URL: play.online.com
+  tasks:
+    - name: call a variable
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
